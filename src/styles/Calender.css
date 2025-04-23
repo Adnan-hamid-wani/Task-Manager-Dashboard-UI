@@ -1,0 +1,121 @@
+/* Calendar container */
+.calendar-container {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+/* Calendar itself */
+.cal-det {
+  width: 100%;
+  max-width: 300px;
+  font-size: 0.8rem;
+  background: transparent;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 40px;
+}
+
+/* Details section */
+.details {
+  text-align: center;
+}
+
+/* Tiles (individual dates) */
+.react-calendar__tile {
+  padding: 5px !important;
+  font-size: 0.8rem !important;
+  background: transparent !important;
+  color: white !important;
+  border-radius: 5px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Tile hover and active states */
+.react-calendar__tile:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: white !important;
+}
+
+.react-calendar__tile:enabled:focus,
+.react-calendar__tile--active {
+  background: rgba(255, 87, 51, 0.8) !important;
+  color: white !important;
+  font-weight: bold;
+}
+
+/* Navigation buttons */
+.react-calendar__navigation button {
+  background: transparent;
+  color: white !important;
+  font-size: 0.9rem !important;
+  border: none;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.react-calendar__navigation button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Month and year display */
+.react-calendar__navigation .react-calendar__navigation__label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: white !important;
+}
+
+/* Weekday labels */
+.react-calendar__month-view__weekdays {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cal-det {
+    max-width: 100%;
+    font-size: 0.7rem;
+  }
+
+  .calendar-container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .react-calendar__tile {
+    padding: 3px !important;
+    font-size: 0.7rem !important;
+  }
+
+  .react-calendar__navigation button {
+    font-size: 0.8rem !important;
+  }
+
+  .react-calendar__navigation .react-calendar__navigation__label {
+    font-size: 0.9rem;
+  }
+
+  .react-calendar__month-view__weekdays {
+    font-size: 0.65rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .cal-det {
+    max-width: 250px;
+    font-size: 0.75rem;
+  }
+}

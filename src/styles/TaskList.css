@@ -1,0 +1,57 @@
+/* Task List */
+
+
+.task-card {
+  background: rgba(38, 157, 165, 0.547); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.task-card:hover {
+  transform: scale(1.05);
+}
+
+.task-info {
+  color: black;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 50px;
+  justify-content: space-between;
+
+}
+
+.task-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.task-due-date,
+.task-status {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.task-buttons {
+  gap: 10px;
+  display:flex;
+}
+
+button {
+  background: rgb(1, 5, 10);
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 123, 255, 0.3);
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  border: none;
+}
+
+button:hover {
+  background: rgba(0, 123, 255, 0.4);
+}

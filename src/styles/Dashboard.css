@@ -1,0 +1,116 @@
+/* Dashboard Layout */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #5dbee7, #1e1e1e);
+  font-family: Arial, sans-serif;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  margin-left: 230px; /* Matches the width of the sidebar */
+}
+
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 90px 50px;
+  gap: 20px;
+  overflow-y: auto;
+  position: relative; /* Positioning context for calendar */
+}
+
+/* Add Task and Calendar Section */
+.add-task-calendar-container {
+  display: flex;
+  gap: 20px;
+}
+
+.add-task-form-card {
+  flex: 1;
+  max-width: 55%;
+  height: 230px;
+}
+
+.calendar-card {
+  position: absolute;
+  right: 50px; /* Pin to right edge */
+}
+
+.task-filters-card {
+  height: 100px;
+  width: 55%;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: white;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 230px;
+  width: calc(100% - 230px);
+  background: rgb(0, 0, 0);
+  padding: 15px 40px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+  margin-top: -20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+  }
+
+  .navbar {
+    left: 0;
+    width: 100%;
+  }
+
+  .add-task-calendar-container {
+    flex-direction: column;
+  }
+
+  .add-task-form-card,
+  .calendar-card {
+    max-width: 100%;
+    position: static;
+  }
+}
