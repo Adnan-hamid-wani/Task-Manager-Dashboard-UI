@@ -1,0 +1,106 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(145deg, #1e1e1e, #7468db);
+  color: white;
+  box-shadow: 0px 2px 15px rgb(232, 232, 232);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.search-container {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 70px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-size: 16px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #FF5733;
+  outline: none;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Adds space between actions */
+}
+
+.new-task-btn {
+  background-color: #FF5733;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.new-task-btn:hover {
+  background-color: #FF4500;
+  transform: scale(1.05);
+  
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+  margin-right: 50px;
+
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  object-fit: cover;
+}
+
+.username {
+  font-size: 16px;
+  color: #fff;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .search-container {
+    margin-bottom: 15px;
+    max-width: 100%;
+  }
+
+  .navbar-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .new-task-btn {
+    width: 100%;
+  }
+
+  .user-profile {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
